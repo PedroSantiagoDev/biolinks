@@ -36,9 +36,9 @@ class LinkController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Link $link)
+    public function edit(Link $link): View
     {
-        //
+        return view('links.edit', compact('link'));
     }
 
     /**
@@ -46,7 +46,9 @@ class LinkController extends Controller
      */
     public function update(UpdateLinkRequest $request, Link $link)
     {
-        //
+        $link->fill($request->validated())->save();
+
+        return to_route('dashboard')->with(['message' => 'Link editado com sucesso!']);
     }
 
     /**
@@ -54,6 +56,8 @@ class LinkController extends Controller
      */
     public function destroy(Link $link)
     {
-        //
+        $link->delete();
+
+        return to_route('dashboard')->with(['message' => 'Link deletado com sucesso!']); 
     }
 }
