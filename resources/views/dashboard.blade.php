@@ -5,7 +5,7 @@
     <span>{{$message}}</span>
     @endif
 
-    <a href="{{ route('links.create') }}">Criar</a>
+    <a href="{{ route('profile') }}">Atualizar Profile</a>
 
     <ul>
         @foreach ($links as $link)
