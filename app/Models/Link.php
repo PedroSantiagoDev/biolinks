@@ -33,8 +33,8 @@ class Link extends Model
 
     /**
      * Function responsible for reader the link
-     * 
-     * @param int $to +1 for moving down and -1 for moving up
+     *
+     * @param  int  $to  +1 for moving down and -1 for moving up
      * @return void
      */
     private function move(int $to)

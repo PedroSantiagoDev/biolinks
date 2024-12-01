@@ -11,6 +11,7 @@ class LogoutController extends Controller
     {
         auth()->logout();
         session()->invalidate();
+
         return to_route('login');
     }
 }

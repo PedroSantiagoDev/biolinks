@@ -23,7 +23,7 @@ class StoreLinkRequest extends FormRequest
     {
         return [
             'link' => ['required', 'url'],
-            'name' => ['required', 'min:3']
+            'name' => ['required', 'min:3'],
         ];
     }
 }

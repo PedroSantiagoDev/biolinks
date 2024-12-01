@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Link;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class LinkSeeder extends Seeder
@@ -20,7 +19,7 @@ class LinkSeeder extends Seeder
                     foreach (range(1, random_int(5, 8)) as $sort) {
                         Link::factory()->create([
                             'user_id' => $user->id,
-                            'sort' => $sort
+                            'sort' => $sort,
                         ]);
                     }
                 }

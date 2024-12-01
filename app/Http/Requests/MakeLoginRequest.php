@@ -31,13 +31,12 @@ class MakeLoginRequest extends FormRequest
     {
         return [
             'email' => ['required', 'email'],
-            'password' => ['required']
+            'password' => ['required'],
         ];
     }
 
     /**
      * Attempt to login in the system
-     * @return bool
      */
     public function attempt(): bool
     {
@@ -50,7 +49,7 @@ class MakeLoginRequest extends FormRequest
 
                 return true;
             }
-        };
+        }
 
         return false;
     }
