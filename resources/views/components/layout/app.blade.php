@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
+<html lang="{{ config('app.locale') }}" data-theme="lofi" class="h-full">
 
 <head>
     <meta charset="UTF-8">
@@ -9,8 +9,8 @@
     @vite(['resources/css/app.css'])
 </head>
 
-<body>
-    <h1>Oi estou so testando</h1>
+<body class="bg-base-300 h-full">
+    {{ $slot }}
 </body>
 
 </html>
